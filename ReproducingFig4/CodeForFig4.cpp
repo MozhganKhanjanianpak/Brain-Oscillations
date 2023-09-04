@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 // Implementation code for reproducing parts of Fig.4 for one realization.                    
-// Notice 1: for each panel, choose an appropriate parameter pNode  
+// Notice 1: For each panel, choose an appropriate parameter pNode  
 // By default here we set pNode=0.00005 to obtain panel (a).          
-// Notice 2: for an excat result, choose tmax more than 20000 time steps. 
+// Notice 2: For an exact result, choose tmax more than 20000 time steps. 
 //////////////////////////////////////////////////////////////////////////////////
 using namespace std;
 
@@ -127,7 +127,7 @@ int main()
                     if ( (A[i][j]!=0) && (node_state[i]==0) && (Exc_link_counter[i][j]==0)  )
                         Exc_link_counter_updated[i][j] = 0;
                     
-					// links that become active as a result of activation of thier pre-synaptic neuron
+					// links that become active as a result of activation of their pre-synaptic neuron
                     else if ( (A[i][j]!=0) && (node_state[i]==1) && (Exc_link_counter[i][j]==0)  )
                         Exc_link_counter_updated[i][j] = 1;
                     
@@ -146,7 +146,7 @@ int main()
                     if ( (B[i][j]!=0) && (node_state[i]==0) && (Inh_link_counter[i][j]==0)  )
                         Inh_link_counter_updated[i][j] = 0;
                     
-                    // links that become active as a result of activation of thier pre-synaptic neuron
+                    // links that become active as a result of activation of their pre-synaptic neuron
                     else if ( (B[i][j]!=0) && (node_state[i]==1) && (Inh_link_counter[i][j]==0)  )
                         Inh_link_counter_updated[i][j] = 1;
                     
