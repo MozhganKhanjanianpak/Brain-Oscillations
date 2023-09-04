@@ -7,4 +7,4 @@ For each phase, select an appropriate noise intensity in the implementation code
 
 
 For the power spectrum and to plot results, use the Jupyter file. 
-For more exact power spectrum, choose tmax more than 20000 time steps. 
+For a more exact power spectrum, choose tmax more than 20000 time steps. 
