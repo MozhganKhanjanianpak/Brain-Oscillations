@@ -1,8 +1,8 @@
 //////////////////////////////////////////////////////////////////////////////
 // k-regular Network with Small-World block E-to-E
-// Notice to the range of degrees in each block!
+// Notice the range of degrees in each block!
 //
-// For a SW network with a same mean in- and out-degree for both neuron typs 
+// For a SW network with the same mean in- and out-degree for both neuron types 
 // set: kE <= kEold - NE*prob, where kEold is kE in an k-regular graph 
 //
 // Example for a SW network with almost N=5000, <kin+>=400, <kin->=100, kout=500, prob=0.02
