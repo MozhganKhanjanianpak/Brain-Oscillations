@@ -1,19 +1,19 @@
 //////////////////////////////////////////////////////////////////////////////
 // k-regular Network with four blocks 
-// Notice to the range of degrees in each block!
+// Notice the range of degrees in each block!
 //
 // In final network:
 //		for E-neurons: k_in=kE+kIout/4	,	k_out=kE+kEout
 //		for I-neurons: k_in=kI+4*kEout	,	k_out=kI+kIout
 //
-// So, for a network with a same in- and out-degree, set:
+// So, for a network with the same in- and out-degree, set:
 //		kE = kIout = k such that k=8*n
 //		kI = kEout = kE/4
 //
 // Example; for a network with N=5000, kin(+)=400, kin(-)=100, kout=500
 // set: kE=kIout=400 , kI=kEout=100
 // 
-// The out put is a text file as the adjacency list where
+// The output is a text file as the adjacency list where
 // 		first row: total_number_of _nodes,	total_number_of_links
 // 		other rows: presynaptic_neuron,	postsynaptic_neuron
 /////////////////////////////////////////////////////////////////////////////
@@ -44,8 +44,8 @@ int main()
 {
  int NE=per*N;
  int NI=N-NE;
- int i,j,l,a,j_max;
- int start,end,counter,limit;
+ int i, j, l, a, j_max;
+ int start, end, counter, limit;
 	
  // output file; adjacency list
  ofstream outputAdjMat("./AdjMatListKregular.txt");
