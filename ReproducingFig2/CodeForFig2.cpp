@@ -124,7 +124,7 @@ int main()
                     if ( (A[i][j]!=0) && (node_state[i]==0) && (Exc_link_counter[i][j]==0)  )
                         Exc_link_counter_updated[i][j] = 0;
                     
-					// links that become active as a result of activation of thier pre-synaptic neuron
+					// links that become active as a result of activation of their pre-synaptic neuron
                     else if ( (A[i][j]!=0) && (node_state[i]==1) && (Exc_link_counter[i][j]==0)  )
                         Exc_link_counter_updated[i][j] = 1;
                     
@@ -143,7 +143,7 @@ int main()
                     if ( (B[i][j]!=0) && (node_state[i]==0) && (Inh_link_counter[i][j]==0)  )
                         Inh_link_counter_updated[i][j] = 0;
                     
-                    // links that become active as a result of activation of thier pre-synaptic neuron
+                    // links that become active as a result of activation of their pre-synaptic neuron
                     else if ( (B[i][j]!=0) && (node_state[i]==1) && (Inh_link_counter[i][j]==0)  )
                         Inh_link_counter_updated[i][j] = 1;
                     
@@ -175,7 +175,7 @@ int main()
             
             
             ///// updating node states
-            // First: obtaining internal node inputs (synaptice current)
+            // First: obtaining internal node inputs (synaptic current)
             for (int i=0 ; i<N ; i++){
                 node_input[i] = 0;
                 int positive_input=0;
