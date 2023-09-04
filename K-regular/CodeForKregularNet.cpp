@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////
-// Implementation code for k-regular netwoks  //
+// Implementation code for k-regular network  //
 ////////////////////////////////////////////////
 using namespace std;
 
@@ -15,7 +15,7 @@ using namespace std;
 #define E    0.8    // percentage of Excitatory neurons
 #define TE   5      // activation time of Exc. links
 #define TI   7      // activation time of Inh. links
-#define D    4     // neuron firing thereshold value
+#define D    4     // neuron firing threshold value
 #define tmax 20000    // implementation maximum time
 #define pNodeE 0.001  // randomly excitatory node activation probability
 #define pNodeI pNodeE  // randomly inhibitory node activation probability
@@ -109,7 +109,7 @@ int main()
             	if ( (A[i][j]!=0) && (node_state[i]==0) && (Exc_link_counter[i][j]==0)  )
                 Exc_link_counter_updated[i][j] = 0;
                     
-				// links that become active as a result of activation of thier pre-synaptic neuron
+				// links that become active as a result of activation of their pre-synaptic neuron
                 else if ( (A[i][j]!=0) && (node_state[i]==1) && (Exc_link_counter[i][j]==0)  )
                     Exc_link_counter_updated[i][j] = 1;
                     
@@ -128,7 +128,7 @@ int main()
                 if ( (B[i][j]!=0) && (node_state[i]==0) && (Inh_link_counter[i][j]==0)  )
                     Inh_link_counter_updated[i][j] = 0;
                     
-            	// links that become active as a result of activation of thier pre-synaptic neuron
+            	// links that become active as a result of activation of their pre-synaptic neuron
                  else if ( (B[i][j]!=0) && (node_state[i]==1) && (Inh_link_counter[i][j]==0)  )
                     Inh_link_counter_updated[i][j] = 1;
                     
@@ -144,7 +144,7 @@ int main()
                 
             
         ///// updating node states
-        // First: obtaining internal node inputs (synaptice current)
+        // First: obtaining internal node inputs (synaptic current)
         for (int i=0 ; i<N ; i++){
             node_input[i] = 0;
             int positive_input=0;
