@@ -1,11 +1,15 @@
-///////////////////////////////////////////////////////////////////////////////////////////////
-// Implementation code for ER netwoks with exponentially decay of synapses activation    	 //
-// Set appropriate cut-off (LowCurLimExc and LowCurLimInh) of excitatory and inhibitory links// 
-// For example:																			     //
-//		for TE=5, TI=7:		LowCurLimExc=0.13	and		LowCurLimInh=0.35                    //
-//		for TE=5, TI=5:		LowCurLimExc=0.08	and		LowCurLimInh=0.3                     //
-//		for TE=7, TI=5:		LowCurLimExc=0.08	and		LowCurLimInh=0.54                    //
-///////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////
+// Implementation code for ER network with exponential decay of synapse activation    	 
+// Set appropriate cut-off (LowCurLimExc and LowCurLimInh) of excitatory and inhibitory links 
+// For example:	
+//			TE:			4		5		6		7
+//		----------------------------------------------------------------------------------
+//		LowCurLimExc:                  0.17	       0.13            0.09	      0.08
+//
+//			TI:			4		5		6		7
+//		---------------------------------------------------------------------------------
+//		LowCurLimInh:                  0.69            0.54            0.38          0.35
+//////////////////////////////////////////////////////////////////////////////////////////////////
 using namespace std;
 
 #include <iostream>
@@ -21,11 +25,11 @@ using namespace std;
 #define E    0.8    // percentage of Excitatory neurons
 #define TE   5      // time constant of Exc. links
 #define TI   5      // time constant of Inh. links
-#define D    4      // neuron firing thereshold value
+#define D    4      // neuron firing threshold value
 #define tmax 20000    // implementation maximum time
-#define cmax  1   // maximum value of an active link's cuurent 
-#define LowCurLimExc 0.08
-#define LowCurLimInh 0.3
+#define cmax  1   // maximum value of an active link's current 
+#define LowCurLimExc 0.13
+#define LowCurLimInh 0.54
 #define pNodeE 0.001 // randomly excitatory node activation probability
 #define pNodeI pNodeE  // randomly inhibitory node activation probability
 #define p   0.1        // connection probability for ER network
@@ -107,7 +111,7 @@ int main()
             		if ( node_state[i]==0 && Exc_link_counter[i][j]==0 )
                 		Exc_link_counter_updated[i][j] = 0;
                     
-					// links that become active as a result of activation of thier pre-synaptic neuron
+					// links that become active as a result of activation of their pre-synaptic neuron
                 	else if ( node_state[i]==1 && Exc_link_counter[i][j]==0 )
                     	Exc_link_counter_updated[i][j] = 1;
                     
@@ -122,11 +126,11 @@ int main()
                 	if ( node_state[i]==0 && Inh_link_counter[i][j]==0 )
                     	Inh_link_counter_updated[i][j] = 0;
                     
-            		// links that become active as a result of activation of thier pre-synaptic neuron
+            		// links that become active as a result of activation of their pre-synaptic neuron
                  	else if ( node_state[i]==1 && Inh_link_counter[i][j]==0 )
                     	Inh_link_counter_updated[i][j] = 1;
                     
-            		// increasing the time counter of active links
+            		// Increasing the time counter of active links
                 	else if ( Inh_link_counter[i][j] >= 1 ) 
                     	Inh_link_counter_updated[i][j] = Inh_link_counter[i][j] + 1;
 				}                                         
@@ -134,7 +138,7 @@ int main()
         }               
             
         ///// updating node states
-        // First: obtaining internal node inputs (synaptice current)
+        // First: obtaining internal node inputs (synaptic current)
         for (int i=0 ; i<N ; i++){
             node_input[i] = 0;
             double positive_input=0;
