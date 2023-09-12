@@ -31,7 +31,7 @@ int Link_counter_updated[N][N] = {0}; // and 0, 1, 2, ...,TI for n_E<row<N and 0
 /********************************************/
 int main()
 {
-    ofstream output("./AdjMatListKregular.txt"); //output for active neurons
+    ofstream output("./ActiveNodeDensity.txt"); //output for active neurons
 	output << "#time,	NE,	NI" << endl;
       
     
@@ -48,7 +48,7 @@ int main()
     
     //-----------------------------------------------
     // INPUT; the adjacency matrix A 
-    ifstream input_file("./AdjMatListSW.txt"); 
+    ifstream input_file("./AdjMatListKregular.txt"); 
     int num1,num2,i,j;
  	input_file >> num1 >> num2 ;
  	for (int counter=0; counter<num2; counter++){
