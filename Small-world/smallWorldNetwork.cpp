@@ -27,7 +27,7 @@ using namespace std;
 #define Winhibitory   1 // weight of inhibitory synapses
 #define prob   0.02  // probability for making E-to-E small-world
 
-int    A[N][N] = {0};  // Adjacency Matrix layer Exc
+int    A[N][N] = {0};  // Adjacency Matrix 
 
 /********************************************/
 // Main
