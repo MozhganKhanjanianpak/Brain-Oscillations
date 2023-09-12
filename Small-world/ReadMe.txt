@@ -1,8 +1,8 @@
-To create a k-regular network with a small-world block E-to-E, run smallWorldNetwork.cpp
+First, to create a k-regular network with a small-world block E-to-E, run smallWorldNetwork.cpp
 Notice the condition of in- and out-degrees
 
 
-To obtain different activity regimes on a k-regular network with a small-world block E-to-E, run CodeForKregularSmallWorldNet.cpp
+Then, to obtain different activity regimes on a k-regular network with a small-world block E-to-E, run CodeForKregularSmallWorldNet.cpp
 For each phase, select an appropriate noise intensity in the implementation code.
 
 
