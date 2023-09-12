@@ -25,7 +25,7 @@ using namespace std;
 #define kIout 400   //output degree of E nodes (in block E-to-I) MUST BE 2*n and >6 >>> for equal indegrees, set 8*n
 #define Wexcitatory   1 // weight of excitatoty synapses
 #define Winhibitory   1 // weight of inhibitory synapses
-#define prob   0.02  // probability for E-to-E making small-world
+#define prob   0.02  // probability for making E-to-E small-world
 
 int    A[N][N] = {0};  // Adjacency Matrix layer Exc
 
